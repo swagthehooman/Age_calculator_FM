@@ -1,0 +1,52 @@
+@font-face {
+    font-family: FontLabel;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: FontError;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+
+input{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+input::placeholder{
+    font-size: 1.5rem;
+    color:hsl(0, 1%, 44%);
+}
+
+label{
+    color: hsl(0, 1%, 44%);
+    margin: 0 0 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.date_input{
+    font-size: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    font-family: FontLabel;
+}
+
+.input_field{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.errorInput{
+    font-size: 0.6rem;
+    font-family: FontError;
+    color: hsl(0, 100%, 67%);
+}
