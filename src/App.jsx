@@ -25,31 +25,41 @@ export default function App() {
     var value = event.target.value;
     var name = event.target.name;
     if (name === "dayInput") {
-      if (value.length > 2) setDayError(true);
+      if (value.length > 2 || value.length === 0) setDayError(true);
       setDayInput(value);
     } else if (name === "monthInput") {
-      if (value.length > 2) setMonthError(true);
+      if (value.length > 2 || value.length === 0) setMonthError(true);
       setMonthInput(value);
     } else {
-      if (value.length > 4) setYearError(true);
+      if (value.length > 4 || value.length === 0) setYearError(true);
       setYearInput(value);
     }
   }
 
   //calculate date difference
   function calculateDiff(event) {
+    console.log("click event");
     if (dayInput.length === 0) setDayError(true);
+    else setDayError(false);
     if (monthInput.length === 0) setMonthError(true);
+    else setMonthError(false);
     if (yearInput.length === 0) setYearError(true);
+    else setYearError(false);
 
-    if (!dayError || !monthError || !yearError) {
+    if (
+      dayInput.length === 0 ||
+      monthInput.length === 0 ||
+      yearInput.length === 0
+    ) {
       //if there is any error, don't calculate
+
       return;
     } else {
       const newDate = new Date(yearInput, monthInput, dayInput);
       var diffInDate = new Date(currentDate - newDate.getTime());
       if (diffInDate < 0) {
-        console.log("error");
+        setYearError(true);
+        return;
       }
       setYear(diffInDate.getUTCFullYear() - 1970);
       setMonth(diffInDate.getMonth());
