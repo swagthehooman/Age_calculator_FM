@@ -36,7 +36,8 @@ label{
     font-size: 0.8rem;
     display: flex;
     gap: 1rem;
-    font-family: FontLabel;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 .input_field{
@@ -47,7 +48,9 @@ label{
 
 .errorInput{
     font-size: 0.6rem;
-    font-family: FontError;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
     color: hsl(0, 100%, 67%);
 }
 
