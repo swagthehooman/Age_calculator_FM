@@ -50,3 +50,9 @@ label{
     font-family: FontError;
     color: hsl(0, 100%, 67%);
 }
+
+@media (max-width: 500px) {
+    .input_field{
+        width: 30%;
+    }
+}

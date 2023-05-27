@@ -14,3 +14,8 @@
 .numbers{
     color: hsl(259, 100%, 65%);
 }
+@media (max-width: 500px) {
+    .date_diff{
+        font-size: 2rem;
+    }
+}
